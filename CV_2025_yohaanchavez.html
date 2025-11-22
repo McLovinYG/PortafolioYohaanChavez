@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Yohaan Chavez Astochado</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="img/signupsign_inscribirs_2798.ico" type="image/x-icon"> <!-- añade tu favicon en img/ -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary-color: #2c3e50; /* Azul oscuro profesional */
+            --secondary-color: #295066; /* Azul más claro para enlaces/iconos */
+            --text-color: #333;
+            --light-text: #666;
+            --bg-color: #fff;
+            --section-spacing: 1.5rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e9ecef; /* Fondo gris para la vista web */
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Contenedor hoja A4 */
+        .cv-container {
+            background-color: var(--bg-color);
+            width: 210mm; /* Ancho A4 */
+            min-height: 297mm; /* Alto A4 */
+            padding: 40px 50px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.95rem;
+            color: var(--text-color);
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-info i {
+            color: var(--secondary-color);
+        }
+
+        .contact-info a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        /* Secciones */
+        section {
+            margin-bottom: var(--section-spacing);
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Experiencia y Educación */
+        .job-block, .edu-block {
+            margin-bottom: 20px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+        .company-info {
+            font-weight: 500;
+            font-style: italic;
+            color: var(--light-text);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Habilidades Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-category strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        /* Estilos de Impresión (PDF) */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .cv-container {
+                width: 100%;
+                height: auto;
+                box-shadow: none;
+                padding: 0; /* Márgenes controlados por la configuración de impresión */
+                margin: 0;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+            /* Ocultar elementos de UI del navegador si fuera necesario */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <!-- ENCABEZADO -->
+        <header>
+            <h1>Yohaan Chavez Astochado</h1>
+            <div class="contact-info">
+                <span><i class="fas fa-map-marker-alt"></i> Lima, Perú</span>
+                <span><i class="fas fa-phone"></i> 953546015</span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:yohaanchavez12@gmail.com">yohaanchavez12@gmail.com</a></span>
+                <span><i class="fab fa-linkedin"></i> <a href="#">linkedin.com/in/yohaan-chavez</a></span>
+                <span><i class="fas fa-globe"></i> <a href="#">Portafolio Web</a></span>
+            </div>
+        </header>
+
+        <!-- PERFIL -->
+        <section>
+            <h2>Perfil Profesional</h2>
+            <p>
+                Estudiante de Ingeniería de Sistemas (7mo ciclo) en la Universidad Privada del Norte, enfocado en el análisis, desarrollo y gestión de proyectos tecnológicos. Poseo capacidad de análisis y resolución de problemas, con experiencia en implementación de funcionalidades y adopción de nuevas tecnologías. Destaco por mi proactividad, organización y habilidades para el trabajo en equipo bajo metodologías ágiles como Scrum, buscando contribuir al éxito de proyectos de desarrollo de software y gestión de sistemas.
+            </p>
+        </section>
+
+        <!-- EXPERIENCIA -->
+        <section>
+            <h2>Experiencia en Proyectos y Prácticas</h2>
+            
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="job-title">Desarrollador Junior / Líder de Proyecto (Académico)</span>
+                    <span class="date">Marzo 2025 - Presente</span>
+                </div>
+                <span class="company-info">Universidad Privada del Norte</span>
+                <ul>
+                    <li><strong>Implementación de Sistemas:</strong> Desarrollo y pruebas de funcionalidades en lenguajes C++ y Python, asegurando la lógica de negocio y eficiencia de algoritmos para proyectos universitarios.</li>
+                    <li><strong>Desarrollo Web y Base de Datos:</strong> Creación de interfaces interactivas y gestión de datos utilizando HTML5, CSS3, JavaScript y SQL, aplicados en proyectos como "Implementación Botica MiFarma" y sistemas de fotografía.</li>
+                    <li><strong>Investigación Tecnológica:</strong> Adopción de nuevas herramientas y documentación técnica de avances, participando activamente en revisiones de código (Code Reviews) para mantener estándares de calidad.</li>
+                    <li><strong>Gestión Ágil:</strong> Aplicación de la metodología Scrum para la planificación de sprints, organización de entregables y colaboración efectiva en equipo.</li>
+                </ul>
+            </div>
+             <div class="job-block">
+                <div class="job-header">
+                    <span class="job-title">Practicante Pre Profesional</span>
+                    <span class="date">Marzo 2024 - Julio 2024</span>
+                </div>
+                <span class="company-info">Progresemos Juntos PROA</span>
+                <ul>
+                    <li>Encargado Del Sistema Web de Gestión de Stock para Tiendas y Pequeños Emprendimiento</li>
+                    <li>Tener actualizado el inventario al momento de hacer los ingresos y retiros de los productos.</li>
+                    <li>Mantenimiento de la eficiencia operativa mediante el cumplimiento estricto de tareas asignadas y gestión del tiempo en entornos dinámicos.</li>
+                </ul>
+            </div>
+
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="job-title">Asistente Comercial y Administrativo</span>
+                    <span class="date">Junio 2023 - Marzo 2024</span>
+                </div>
+                <span class="company-info">Empresa Textil & Confecciones ERIL</span>
+                <ul>
+                    <li>Administración integral de ventas y control de inventario (stock), optimizando la organización de productos y flujo de caja.</li>
+                    <li>Atención al cliente y resolución de incidencias, demostrando habilidades efectivas de comunicación y trato interpersonal para fidelización de clientes.</li>
+                    <li>Mantenimiento de la eficiencia operativa mediante el cumplimiento estricto de tareas asignadas y gestión del tiempo en entornos dinámicos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FORMACIÓN -->
+        <section>
+            <h2>Formación Académica</h2>
+            <div class="edu-block">
+                <div class="job-header">
+                    <span class="job-title">Bachiller en Ingeniería de Sistemas</span>
+                    <span class="date">2021 - 2025 (En curso)</span>
+                </div>
+                <span class="company-info">Universidad Privada del Norte</span>
+                <ul>
+                    <li>Cursando actualmente el 7mo ciclo con enfoque en desarrollo y gestión.</li>
+                    <li><strong>Certificaciones:</strong> Estructura de Datos y Fundamentos de Algoritmos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section>
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Lenguajes de Programación</strong>
+                    <p>C++, Python, JavaScript,SQL SERVER,C#,Oracle</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Desarrollo Web</strong>
+                    <p>HTML5, CSS3, WordPress</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Herramientas y Software</strong>
+                    <p>Git, UML, Photoshop, Microsoft Office ,Excel intermedio, Power BI</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Metodologías y Soft Skills</strong>
+                    <p>Scrum, Trabajo en equipo, Investigación técnica</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- IDIOMAS -->
+        <section>
+            <h2>Idiomas</h2>
+            <p><strong>Inglés:</strong> Nivel Intermedio (Lectura, escritura y conversación).</p>
+        </section>
+	<!-- CERTIFICACIONES -->
+        <section>
+            <h2>Certificaciones</h2>
+            <ul class="cert-list">
+                <li>
+                    <span class="cert-name">Certificado de Estructura de Datos</span>
+                    <a href="https://www.credly.com/badges/69a30d3a-d846-4b56-834f722162a78503/public_url" target="_blank" class="cert-link">				Ver Credencial <i class="fas fa-external-link-alt"></i></a>
+                </li>
+                <li>
+                    <span class="cert-name">Fundamentos de Algoritmos</span>
+                    <a href="https://www.credly.com/badges/360e0613-3d49-4e1c-af4dc70cbd370dc3/public_url" target="_blank" class="cert-link">			Ver Credencial <i class="fas fa-external-link-alt"></i></a>
+                </li>
+                <li>
+                    <span class="cert-name">Certificación Especializada (Credly)</span>
+                    <a href="https://www.credly.com/badges/3ae241c1-e037-4284-9c5c-a959507d3a90" target="_blank" class="cert-link">Ver 				Credencial <i class="fas fa-external-link-alt"></i></a>
+                </li>
+                <li>
+                    <span class="cert-name">Certificación Especializada (Credly)</span>
+                    <a href="https://www.credly.com/badges/9a45db0f-8823-46a7-99f7-63c8fc9fa6df" target="_blank" class="cert-link">Ver 				Credencial <i class="fas fa-external-link-alt"></i></a>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    </div>
+
+</body>
+</html>
