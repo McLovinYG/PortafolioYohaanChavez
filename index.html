@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="img/stationery_78416.ico" type="image/x-icon"> <!-- añade tu favicon en img/ -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">YOHAAN</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/hero.png" alt="">
+            </div>
+            <h1>YOHAAN</h1>
+            <h2>CHAVEZ ASTOCHADO - ESTUD. INGE. SISTEMAS</h2>
+            <div class="redes">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-skype"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-solid fa-rss"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>YOHAAN CHAVEZ - </span> Soy una persona proactiva, organizada y responsable, con excelentes relaciones interpersonales; manejo de inventarios y atención al cliente. Capaz de trabajar en equipo, destacado por habilidades. Además, poseo capacidad de análisis, adaptación y resolución de problemas, enfocándome en mantener un entorno laboral eficiente. Estoy motivado por aprender y aplicar mis conocimientos en Ingeniería de Sistemas para contribuir al éxito de los proyectos asignados.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            26-11-2003
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            yohaanchavez12@gmail.com
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            +51 953546015 
+                        <li>
+                            <strong>Carrera</strong>
+                            Ingeniería de Sistemas
+                        </li>
+                        <li>
+                            <strong>Universidad</strong>
+                            Universidad Privada del Norte
+                        </li>
+                        <li>
+                            <strong>Periodo</strong>
+                            2021 - 2025 (cursando 7mo ciclo)
+                        </li>
+                        <li>
+                            <strong>Colegio</strong>
+                            Colegio San Andres (2014 - 2020)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MAC OS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-car"></i>
+                            <span>AUTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- botón que abre el CV en nueva pestaña -->
+            <button id="btn-ver-cv">
+                Ver CV <i class="fa-solid fa-file-lines"></i>
+                <span class="overlay"></span>
+            </button>
+            <!-- enlace oculto que apunta al CV HTML (mismo directorio) -->
+            <a id="link-cv" href="CV_2025_yohaanchavez.html" target="_blank" style="display:none;"></a>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Tecnicas y Habilidades</h3>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>89%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Photoshop</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Wordpress</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>C++</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Habilidades Professionales </h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en SCRUM</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Proyectos realizados</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>94%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Ingeniería de Sistemas</h4>
+                        <span class="casa">Universidad Privada del Norte</span>
+                        <span class="fecha">2021 - 2025 (cursando 7mo ciclo)</span>
+                        <p>Cursando la carrera de Ingeniería de Sistemas, con interés en análisis, desarrollo y gestión de proyectos.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Educación Secundaria</h4>
+                        <span class="casa">Colegio San Andres</span>
+                        <span class="fecha">2014 - 2020</span>
+                        <p>Formación secundaria completa.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Formación Complementaria</h4>
+                        <span class="casa">Cursos y autoaprendizaje</span>
+                        <span class="fecha">Actualmente</span>
+                        <p>Enfoque autodidacta en tecnologías, herramientas de administración e investigación técnica.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Asistente Comercial — Área de Ventas</h4>
+                        <span class="casa">Empresa Textil</span>
+                        <span class="fecha">Junio 2023 - Enero 2024</span>
+                        <p>En La Victoria, Parque Canepa: encargado de la administración de las ventas e inventario stock, atención al cliente.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Producción de Artefactos Decorativos</h4>
+                        <span class="casa">Empresa Confecciones ERIL</span>
+                        <span class="fecha">Ene 2024 - Marzo 2024</span>
+                        <p>Mantenimiento del orden y limpieza en el lugar de trabajo, ejecución de tareas de ventas y comunicación con clientes.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Practicante en Progresemos Juntos</h4>
+                        <span class="casa">Proyectos Académicos y Prácticas</span>
+                        <span class="fecha">Marzo 2024 - Julio 2024</span>
+                        <p>Encargado Del Sistema Web de Gestión de Stock para Tiendas y Pequeños Emprendimiento.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTAFOLIO DE PROYECTOS</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="img/vistasBasededatos.png" alt="">
+                    <div class="overlay">
+                        <h3>BASE DE DATOS</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/tablasbotica.png" alt="">
+                    <div class="overlay">
+                        <h3>Implementación Botica MiFarma</h3>
+                        <p>Tablas</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/login.png" alt="">
+                    <div class="overlay">
+                        <h3>Pasteleria Tineo Optimizacion</h3>
+                        <p>Login</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/MenuPrincipal.png" alt="">
+                    <div class="overlay">
+                        <h3>Menu Principal</h3>
+                        <p>Clientes</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/comprobantedepagos.png" alt="">
+                    <div class="overlay">
+                        <h3>Comprobante de Pago</h3>
+                        <p>Boleta</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/RegistroDeProductos.png" alt="">
+                    <div class="overlay">
+                        <h3>Productos</h3>
+                        <p>Registro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tú Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="img/ubicacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                AV Maria Parado de Bellido LT 5 MZ HUERTOS DE PRO
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llama al : 953546015 
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: yohaanchavez12@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-skype"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-solid fa-rss"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
