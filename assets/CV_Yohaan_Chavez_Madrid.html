@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Yohaan Chavez Astochado (Madrid)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --primary: #1e293b;
+      --secondary: #334155;
+      --accent: #0284c7;
+      --text-main: #1f2937;
+      --text-muted: #64748b;
+      --border-color: #cbd5e1;
+      --bg-page: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f1f5f9;
+      color: var(--text-main);
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      max-width: 820px;
+      margin: 20px auto 10px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .toolbar-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .toolbar-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      background: #e0f2fe;
+      color: #0369a1;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+
+    .btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #0284c7;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-print:hover {
+      background-color: #0369a1;
+    }
+
+    .page {
+      max-width: 820px;
+      margin: 10px auto 40px auto;
+      background: var(--bg-page);
+      padding: 42px 48px;
+      border-radius: 2px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* HEADER */
+    .header-name {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      font-size: 12.5px;
+      color: #475569;
+      margin-bottom: 6px;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .contact-item.highlight {
+      font-weight: 600;
+      color: #0369a1;
+    }
+
+    .contact-item a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-icon {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .divider {
+      height: 1px;
+      background-color: #0f172a;
+      margin: 14px 0 16px 0;
+    }
+
+    /* SECTIONS */
+    .section {
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 4px;
+      margin-bottom: 9px;
+    }
+
+    .section-p {
+      font-size: 12px;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    /* EXPERIENCE & EDUCATION */
+    .entry {
+      margin-bottom: 11px;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 12.5px;
+    }
+
+    .entry-title {
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    .entry-date {
+      font-size: 11.5px;
+      color: #64748b;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .entry-company {
+      font-size: 12px;
+      font-style: italic;
+      color: #0369a1;
+      margin-top: 1px;
+      margin-bottom: 4px;
+    }
+
+    .bullet-list {
+      list-style-type: disc;
+      padding-left: 18px;
+      margin-top: 4px;
+    }
+
+    .bullet-list li {
+      font-size: 11.5px;
+      color: #334155;
+      line-height: 1.45;
+      margin-bottom: 3px;
+    }
+
+    .bullet-list li strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    /* TWO COLUMNS (SKILLS & CERTS) */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 24px;
+    }
+
+    .skill-block h4 {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 2px;
+    }
+
+    .skill-block p {
+      font-size: 11.5px;
+      color: #334155;
+      line-height: 1.4;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px 20px;
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      color: #334155;
+    }
+
+    .cert-link {
+      color: #0284c7;
+      font-size: 10.5px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      margin-left: 4px;
+    }
+
+    .cert-link:hover {
+      text-decoration: underline;
+    }
+
+    /* PRINT STYLES */
+    @media print {
+      body {
+        background: white;
+        color: #000;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .page {
+        margin: 0;
+        padding: 24px 32px;
+        box-shadow: none;
+        max-width: 100%;
+        width: 100%;
+      }
+      @page {
+        size: A4;
+        margin: 12mm 12mm 12mm 12mm;
+      }
+      .section {
+        page-break-inside: avoid;
+      }
+      .entry {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div>
+      <span class="toolbar-title">Currículum Vitae — Yohaan Chavez</span>
+      <span class="toolbar-badge">Ubicación: Madrid, España</span>
+    </div>
+    <button class="btn-print" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 9V2h12v7"></path>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+      Imprimir / Guardar como PDF
+    </button>
+  </div>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header>
+      <h1 class="header-name">YOHAAN CHAVEZ ASTOCHADO</h1>
+      <div class="contact-row">
+        <!-- UBICACIÓN CAMBIADA A MADRID, ESPAÑA -->
+        <span class="contact-item highlight">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Madrid, España
+        </span>
+        <span class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          +34 632894272
+        </span>
+        <span class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          yohaanchavez12@gmail.com
+        </span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63c.9 0 1.63-.73 1.63-1.63s-.73-1.63-1.63-1.63z"/></svg>
+          <a href="https://linkedin.com/in/yohaan-chavez" target="_blank" rel="noopener">linkedin.com/in/yohaan-chavez</a>
+        </span>
+        <span class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          <a href="#" target="_blank" rel="noopener">Portafolio Web</a>
+        </span>
+      </div>
+    </header>
+
+    <div class="divider"></div>
+
+    <!-- PERFIL PROFESIONAL -->
+    <section class="section">
+      <h2 class="section-title">Perfil Profesional</h2>
+      <p class="section-p">
+        Estudiante de Ingeniería de Sistemas (7mo ciclo) en la Universidad Privada del Norte, enfocado en el análisis, desarrollo y gestión de proyectos tecnológicos. Poseo capacidad de análisis y resolución de problemas, con experiencia en implementación de funcionalidades y adopción de nuevas tecnologías. Destaco por mi proactividad, organización y habilidades para el trabajo en equipo bajo metodologías ágiles como Scrum, buscando contribuir al éxito de proyectos de desarrollo de software y gestión de sistemas.
+      </p>
+    </section>
+
+    <!-- EXPERIENCIA EN PROYECTOS Y PRÁCTICAS -->
+    <section class="section">
+      <h2 class="section-title">Experiencia en Proyectos y Prácticas</h2>
+
+      <!-- Puesto 1 -->
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Desarrollador Junior / Líder de Proyecto (Académico)</span>
+          <span class="entry-date">Marzo 2025 - Presente</span>
+        </div>
+        <div class="entry-company">Universidad Privada del Norte</div>
+        <ul class="bullet-list">
+          <li><strong>Implementación de Sistemas:</strong> Desarrollo y pruebas de funcionalidades en lenguajes C++ y Python, asegurando la lógica de negocio y eficiencia de algoritmos para proyectos universitarios.</li>
+          <li><strong>Desarrollo Web y Base de Datos:</strong> Creación de interfaces interactivas y gestión de datos utilizando HTML5, CSS3, JavaScript y SQL, aplicados en proyectos como "Implementación Botica MiFarma" y sistemas de fotografía.</li>
+          <li><strong>Investigación Tecnológica:</strong> Adopción de nuevas herramientas y documentación técnica de avances, participando activamente en revisiones de código (Code Reviews) para mantener estándares de calidad.</li>
+          <li><strong>Gestión Ágil:</strong> Aplicación de la metodología Scrum para la planificación de sprints, organización de entregables y colaboración efectiva en equipo.</li>
+        </ul>
+      </div>
+
+      <!-- Puesto 2 -->
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Practicante Pre Profesional</span>
+          <span class="entry-date">Marzo 2024 - Julio 2024</span>
+        </div>
+        <div class="entry-company">Progresemos Juntos PROA</div>
+        <ul class="bullet-list">
+          <li>Encargado Del Sistema Web de Gestión de Stock para Tiendas y Pequeños Emprendimiento.</li>
+          <li>Tener actualizado el inventario al momento de hacer los ingresos y retiros de los productos.</li>
+          <li>Mantenimiento de la eficiencia operativa mediante el cumplimiento estricto de tareas asignadas y gestión del tiempo en entornos dinámicos.</li>
+        </ul>
+      </div>
+
+      <!-- Puesto 3 -->
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Asistente Comercial y Administrativo</span>
+          <span class="entry-date">Junio 2023 - Marzo 2024</span>
+        </div>
+        <div class="entry-company">Empresa Textil & Confecciones ERIL</div>
+        <ul class="bullet-list">
+          <li>Administración integral de ventas y control de inventario (stock), optimizando la organización de productos y flujo de caja.</li>
+          <li>Atención al cliente y resolución de incidencias, demostrando habilidades efectivas de comunicación y trato interpersonal para fidelización de clientes.</li>
+          <li>Mantenimiento de la eficiencia operativa mediante el cumplimiento estricto de tareas asignadas y gestión del tiempo en entornos dinámicos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FORMACIÓN ACADÉMICA -->
+    <section class="section">
+      <h2 class="section-title">Formación Académica</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Bachiller en Ingeniería de Sistemas</span>
+          <span class="entry-date">2021 - 2025 (En curso)</span>
+        </div>
+        <div class="entry-company">Universidad Privada del Norte</div>
+        <ul class="bullet-list">
+          <li>Cursando actualmente el 7mo ciclo con enfoque en desarrollo y gestión.</li>
+          <li>Certificaciones: Estructura de Datos y Fundamentos de Algoritmos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HABILIDADES TÉCNICAS -->
+    <section class="section">
+      <h2 class="section-title">Habilidades Técnicas</h2>
+      <div class="skills-grid">
+        <div class="skill-block">
+          <h4>Lenguajes de Programación</h4>
+          <p>C++, Python, JavaScript, SQL SERVER, C#, Oracle</p>
+        </div>
+        <div class="skill-block">
+          <h4>Desarrollo Web</h4>
+          <p>HTML5, CSS3, WordPress</p>
+        </div>
+        <div class="skill-block">
+          <h4>Herramientas y Software</h4>
+          <p>Git, UML, Photoshop, Microsoft Office, Excel intermedio, Power BI</p>
+        </div>
+        <div class="skill-block">
+          <h4>Metodologías y Soft Skills</h4>
+          <p>Scrum, Trabajo en equipo, Investigación técnica</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IDIOMAS -->
+    <section class="section">
+      <h2 class="section-title">Idiomas</h2>
+      <p class="section-p"><strong>Inglés:</strong> Nivel Intermedio (Lectura, escritura y conversación).</p>
+    </section>
+
+    <!-- CERTIFICACIONES -->
+    <section class="section">
+      <h2 class="section-title">Certificaciones</h2>
+      <div class="cert-grid">
+        <div class="cert-item">
+          <span>• Certificado de Estructura de Datos</span>
+          <a href="#" class="cert-link">Ver Credencial ↗</a>
+        </div>
+        <div class="cert-item">
+          <span>• Fundamentos de Algoritmos</span>
+          <a href="#" class="cert-link">Ver Credencial ↗</a>
+        </div>
+        <div class="cert-item">
+          <span>• Certificación Especializada (Credly)</span>
+          <a href="#" class="cert-link">Ver Credencial ↗</a>
+        </div>
+        <div class="cert-item">
+          <span>• Certificación Especializada (Credly)</span>
+          <a href="#" class="cert-link">Ver Credencial ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
